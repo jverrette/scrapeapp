@@ -26,7 +26,7 @@ def sqrt(number):
 
 def date(stringer):
     wiki = 'http://petdoc.ch/'
-
+    wiki = stringer
 #Query the website and return the html to the variable 'page'
     http = urllib3.PoolManager()
     page = http.request('GET', wiki)
