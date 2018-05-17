@@ -46,7 +46,7 @@ def db(stringer):
     lister = []
     for i in range(len(outputText)):
         lister.extend(outputText[i].split("\n"))
-    return pd.Series(lister)
+    return lister
 
 def emails(lister):
     for idx, phrase in enumerate(lister):
@@ -57,6 +57,18 @@ def emails(lister):
             pass
     return ''
 
+def phone(lister):
+    usa = '(1|\+1)?([ -])?(\d{3}|\(\d{3}\))?([ -])?\d{3}([ -])?\d{4}'
+    swiss = '(41|\+41)?(0|\(0\))?\d{2}([ -])?\d{3}([ -])?\d{2}([ -])?\d{2}'
+    china = '(86|\+86)?([ -])?1\d{2}([ -])?\d{4}([ -])?\d{4}'
+    for regrex in [usa, swiss, china]:
+        for idx, phrase in enumerate(lister):
+            try:
+                match = re.search(regrex, lister[idx])
+                return match.group(0)
+            except:
+                pass
+    return ''
 
 def hatePandas(x):
     if isinstance(x, (list, tuple)):

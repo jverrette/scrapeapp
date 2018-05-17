@@ -11,7 +11,8 @@ def hello2(name='index'):
 def hello():
     if request.method == 'POST':
         outputter = request.form['website']
-        return render_template('response.html', website=outputter, title=pythonFile.count('Aruba'), string=pythonFile.date(outputter))
+        lister = pythonFile.db(outputter)
+        return render_template('response.html', website=outputter, title=pythonFile.count('Aruba'), phone=pythonFile.phone(lister), email=pythonFile.emails(lister))
     return render_template('index.html', title=pythonFile.count('Aruba'))
  
 if __name__ == "__main__":
