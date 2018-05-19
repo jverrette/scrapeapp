@@ -1,0 +1,183 @@
+[ N 2018-05-17 17:27:51.0583 29792/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 17:27:51.1553 29795/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 17:27:51.1555 29795/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 17:27:51.2017 29795/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 29795
+[ N 2018-05-17 17:27:53.4888 29795/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 29829 output: Traceback (most recent call last):
+App 29829 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 29829 output:     app_module = load_app()
+App 29829 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 29829 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 29829 output:   File "/home/jean/Documents/scrape/scrapeapp/passenger_wsgi.py", line 2, in <module>
+App 29829 output:     from hello import app as application
+App 29829 output:   File "/home/jean/Documents/scrape/scrapeapp/hello.py", line 1, in <module>
+App 29829 output:     from flask import Flask, render_template, request
+App 29829 output: ImportError: No module named flask
+[ E 2018-05-17 17:27:54.3294 29795/Te age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp: The application process exited prematurely.
+  Error ID: e670485d
+  Error details saved to: /tmp/passenger-error-MLevw1.html
+
+[ E 2018-05-17 17:27:54.3386 29795/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is e670485d. Please see earlier logs for details about the error.
+App 29871 output: Traceback (most recent call last):
+App 29871 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 29871 output:     
+App 29871 output: app_module = load_app()
+App 29871 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 29871 output:     
+App 29871 output: return imp.load_source('passenger_wsgi', startup_file)
+App 29871 output:   File "/home/jean/Documents/scrape/scrapeapp/passenger_wsgi.py", line 2, in <module>
+App 29871 output:     
+App 29871 output: from hello import app as application
+App 29871 output:   File "/home/jean/Documents/scrape/scrapeapp/hello.py", line 1, in <module>
+App 29871 output:     
+App 29871 output: from flask import Flask, render_template, request
+App 29871 output: ImportError
+App 29871 output: : 
+App 29871 output: No module named flask
+App 29871 output: 
+[ E 2018-05-17 17:28:11.2300 29795/Tj age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp: The application process exited prematurely.
+  Error ID: 14c2dfd7
+  Error details saved to: /tmp/passenger-error-alwcCx.html
+
+[ E 2018-05-17 17:28:11.2395 29795/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 14c2dfd7. Please see earlier logs for details about the error.
+App 29914 output: Traceback (most recent call last):
+App 29914 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 29914 output:     
+App 29914 output: app_module = load_app()
+App 29914 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 29914 output:     
+App 29914 output: return imp.load_source('passenger_wsgi', startup_file)
+App 29914 output:   File "/home/jean/Documents/scrape/scrapeapp/passenger_wsgi.py", line 2, in <module>
+App 29914 output:     
+App 29914 output: from hello import app as application
+App 29914 output:   File "/home/jean/Documents/scrape/scrapeapp/hello.py", line 1, in <module>
+App 29914 output:     
+App 29914 output: from flask import Flask, render_template, request
+App 29914 output: ImportError
+App 29914 output: : 
+App 29914 output: No module named flask
+App 29914 output: 
+[ E 2018-05-17 17:28:11.9952 29795/To age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp: The application process exited prematurely.
+  Error ID: 26840d63
+  Error details saved to: /tmp/passenger-error-Mu3Dy6.html
+
+[ E 2018-05-17 17:28:12.0153 29795/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-2] Cannot checkout session because a spawning error occurred. The identifier of the error is 26840d63. Please see earlier logs for details about the error.
+[ E 2018-05-17 17:28:12.0172 29795/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-2] Cannot checkout session because a spawning error occurred. The identifier of the error is 26840d63. Please see earlier logs for details about the error.
+App 29952 output: Traceback (most recent call last):
+App 29952 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 29952 output:     app_module = load_app()
+App 29952 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 29952 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 29952 output:   File "/home/jean/Documents/scrape/scrapeapp/passenger_wsgi.py", line 2, in <module>
+App 29952 output:     from hello import app as application
+App 29952 output:   File "/home/jean/Documents/scrape/scrapeapp/hello.py", line 1, in <module>
+App 29952 output:     from flask import Flask, render_template, request
+App 29952 output: ImportError: No module named flask
+[ E 2018-05-17 17:28:22.7905 29795/Tt age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp: The application process exited prematurely.
+  Error ID: 414a8f29
+  Error details saved to: /tmp/passenger-error-2Rsovj.html
+
+[ E 2018-05-17 17:28:22.8016 29795/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-3] Cannot checkout session because a spawning error occurred. The identifier of the error is 414a8f29. Please see earlier logs for details about the error.
+
+[ N 2018-05-17 17:31:55.7593 29795/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 17:31:55.7594 29795/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 17:31:55.7595 29795/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 17:31:55.7595 29795/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 17:31:55.7596 29795/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 17:31:55.7596 29795/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 17:31:55.7596 29795/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 17:31:55.7596 29795/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 17:31:55.7919 29795/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 23:19:25.7678 1577/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 23:19:25.7974 1583/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 23:19:25.7977 1583/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 23:19:25.8097 1583/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 1583
+[ N 2018-05-17 23:19:28.1081 1583/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 1642 output: Traceback (most recent call last):
+App 1642 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 1642 output:     app_module = load_app()
+App 1642 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 1642 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 1642 output:   File "/home/jean/Documents/scrape/env/scrapeapp/lib/python3.5/imp.py", line 172, in load_source
+App 1642 output:     module = _load(spec)
+App 1642 output:   File "<frozen importlib._bootstrap>", line 693, in _load
+App 1642 output:   File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+App 1642 output:   File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+App 1642 output:   File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+App 1642 output:   File "/home/jean/Documents/scrape/scrapeapp/passenger_wsgi.py", line 2, in <module>
+App 1642 output:     from hello import app as application
+App 1642 output:   File "/home/jean/Documents/scrape/scrapeapp/hello.py", line 2, in <module>
+App 1642 output:     import pythonFile
+App 1642 output:   File "/home/jean/Documents/scrape/scrapeapp/pythonFile.py", line 1, in <module>
+App 1642 output:     import urllib3
+App 1642 output: ImportError: No module named 'urllib3'
+[ E 2018-05-17 23:19:28.3360 1583/Te age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp: The application process exited prematurely.
+  Error ID: e1c30d75
+  Error details saved to: /tmp/passenger-error-lWjSJD.html
+
+[ E 2018-05-17 23:19:28.3451 1583/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is e1c30d75. Please see earlier logs for details about the error.
+
+[ N 2018-05-17 23:20:46.1210 1583/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 23:20:46.1210 1583/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 23:20:46.1212 1583/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 23:20:46.1212 1583/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 23:20:46.1216 1583/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 23:20:46.1216 1583/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 23:20:46.1216 1583/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 23:20:46.1217 1583/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 23:20:46.1662 1583/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 23:24:20.6111 1846/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 23:24:20.6412 1849/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 23:24:20.6415 1849/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 23:24:20.6557 1849/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 1849
+[ N 2018-05-17 23:24:22.9406 1849/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 1884 output: [ pid=1884, time=2018-05-17 23:24:54,157 ]: Exception on /send [POST]
+App 1884 output: Traceback (most recent call last):
+App 1884 output:   File "/home/jean/Documents/scrape/env/scrapeapp/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+App 1884 output:     response = self.full_dispatch_request()
+App 1884 output:   File "/home/jean/Documents/scrape/env/scrapeapp/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+App 1884 output:     rv = self.handle_user_exception(e)
+App 1884 output:   File "/home/jean/Documents/scrape/env/scrapeapp/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+App 1884 output:     reraise(exc_type, exc_value, tb)
+App 1884 output:   File "/home/jean/Documents/scrape/env/scrapeapp/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+App 1884 output:     raise value
+App 1884 output:   File "/home/jean/Documents/scrape/env/scrapeapp/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+App 1884 output:     rv = self.dispatch_request()
+App 1884 output:   File "/home/jean/Documents/scrape/env/scrapeapp/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+App 1884 output:     return self.view_functions[rule.endpoint](**req.view_args)
+App 1884 output:   File "/home/jean/Documents/scrape/scrapeapp/hello.py", line 14, in hello
+App 1884 output:     lister = pythonFile.db(outputter)
+App 1884 output:   File "/home/jean/Documents/scrape/scrapeapp/pythonFile.py", line 13, in db
+App 1884 output:     soup = BeautifulSoup(page.data, "lxml")
+App 1884 output:   File "/home/jean/Documents/scrape/env/scrapeapp/lib/python3.5/site-packages/bs4/__init__.py", line 165, in __init__
+App 1884 output:     % ",".join(features))
+App 1884 output: bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+
+[ N 2018-05-17 23:27:07.2865 1849/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 23:27:07.2866 1849/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 23:27:07.2867 1849/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 1884, application /home/jean/Documents/scrape/scrapeapp (development)
+[ N 2018-05-17 23:27:07.2869 1849/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 23:27:07.2870 1849/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 23:27:07.2870 1849/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 23:27:07.2870 1849/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 23:27:07.2870 1849/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 23:27:07.2870 1849/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 23:27:07.2871 1849/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 1884, application /home/jean/Documents/scrape/scrapeapp (development)
+[ N 2018-05-17 23:27:07.4191 1849/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 23:27:50.7948 2033/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 23:27:50.8248 2036/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 23:27:50.8251 2036/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 23:27:50.8373 2036/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 2036
+[ N 2018-05-17 23:27:53.2411 2036/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-05-17 23:32:37.3248 2036/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 23:32:37.3259 2036/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 23:32:37.3284 2036/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 2071, application /home/jean/Documents/scrape/scrapeapp (development)
+[ N 2018-05-17 23:32:37.3291 2036/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 23:32:37.3292 2036/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 23:32:37.3292 2036/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 23:32:37.3292 2036/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 23:32:37.3295 2036/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 23:32:37.3295 2036/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 23:32:37.3296 2036/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 2071, application /home/jean/Documents/scrape/scrapeapp (development)
+[ N 2018-05-17 23:32:37.4620 2036/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished

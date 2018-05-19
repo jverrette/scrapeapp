@@ -1,0 +1,342 @@
+[ N 2018-05-17 17:32:02.7158 30101/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 17:32:02.7477 30104/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 17:32:02.7480 30104/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 17:32:02.7610 30104/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 30104
+App 30138 output: Traceback (most recent call last):
+App 30138 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 30138 output:     app_module = load_app()
+App 30138 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 30138 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 30138 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 2, in <module>
+App 30138 output:     from app import MyApp as application
+App 30138 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/app.py", line 9
+App 30138 output:     MyApp.run()
+App 30138 output:         ^
+App 30138 output: IndentationError: expected an indented block
+[ E 2018-05-17 17:32:05.0677 30104/Te age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: 33ca71a8
+  Error details saved to: /tmp/passenger-error-sXaGmF.html
+
+[ E 2018-05-17 17:32:05.0767 30104/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 33ca71a8. Please see earlier logs for details about the error.
+[ N 2018-05-17 17:32:05.0987 30104/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 30179 output: Traceback (most recent call last):
+App 30179 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 30179 output:     
+App 30179 output: app_module = load_app()
+App 30179 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 30179 output:     
+App 30179 output: return imp.load_source('passenger_wsgi', startup_file)
+App 30179 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 2, in <module>
+App 30179 output:     
+App 30179 output: from app import MyApp as application
+App 30179 output:   File "
+App 30179 output: /home/jean/Documents/scrape/scrapeapp/basicApp/app.py
+App 30179 output: ", line 
+App 30179 output: 9
+App 30179 output: 
+App 30179 output:     
+App 30179 output: MyApp.run()
+App 30179 output:     
+App 30179 output:  
+App 30179 output:  
+App 30179 output:  
+App 30179 output:  
+App 30179 output: ^
+App 30179 output: IndentationError
+App 30179 output: : 
+App 30179 output: expected an indented block
+App 30179 output: 
+[ E 2018-05-17 17:32:17.6862 30104/Tj age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: a25a4e54
+  Error details saved to: /tmp/passenger-error-AWI42T.html
+
+[ E 2018-05-17 17:32:17.6958 30104/Ta age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is a25a4e54. Please see earlier logs for details about the error.
+App 30220 output: Traceback (most recent call last):
+App 30220 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 30220 output:     app_module = load_app()
+App 30220 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 30220 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 30220 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 2, in <module>
+App 30220 output:     from app import MyApp as application
+App 30220 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/app.py", line 9
+App 30220 output:     MyApp.run()
+App 30220 output:         ^
+App 30220 output: IndentationError: expected an indented block
+[ E 2018-05-17 17:32:21.6641 30104/To age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: 606912ff
+  Error details saved to: /tmp/passenger-error-TCjKpn.html
+
+[ E 2018-05-17 17:32:21.6770 30104/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-2] Cannot checkout session because a spawning error occurred. The identifier of the error is 606912ff. Please see earlier logs for details about the error.
+
+[ N 2018-05-17 17:32:47.9975 30104/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 17:32:47.9976 30104/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 17:32:47.9979 30104/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 17:32:47.9979 30104/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 17:32:47.9979 30104/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 17:32:47.9979 30104/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 17:32:47.9984 30104/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 17:32:47.9984 30104/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 17:32:48.0439 30104/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 17:32:49.4497 30277/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 17:32:49.4830 30280/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 17:32:49.4833 30280/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 17:32:49.4985 30280/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 30280
+App 30314 output: Traceback (most recent call last):
+App 30314 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 30314 output:     app_module = load_app()
+App 30314 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 30314 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 30314 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 2, in <module>
+App 30314 output:     from app import MyApp as application
+App 30314 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/app.py", line 1, in <module>
+App 30314 output:     from flask import Flask, render_template
+App 30314 output: ImportError: No module named flask
+[ N 2018-05-17 17:32:51.7509 30280/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+[ E 2018-05-17 17:32:51.7955 30280/Te age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: 942823bc
+  Error details saved to: /tmp/passenger-error-WkC5u8.html
+
+[ E 2018-05-17 17:32:51.8051 30280/T7 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 942823bc. Please see earlier logs for details about the error.
+App 30447 output: Traceback (most recent call last):
+App 30447 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 30447 output:     app_module = load_app()
+App 30447 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 30447 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 30447 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 2, in <module>
+App 30447 output:     from app import MyApp as application
+App 30447 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/app.py", line 1, in <module>
+App 30447 output:     from flask import Flask, render_template
+App 30447 output: ImportError: No module named flask
+[ E 2018-05-17 17:40:05.2263 30280/Tj age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: cc8971ae
+  Error details saved to: /tmp/passenger-error-Zjfpli.html
+
+[ E 2018-05-17 17:40:05.2365 30280/T9 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 2-1] Cannot checkout session because a spawning error occurred. The identifier of the error is cc8971ae. Please see earlier logs for details about the error.
+
+[ N 2018-05-17 17:42:17.9271 30280/T7 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 17:42:17.9271 30280/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 17:42:17.9273 30280/Tb Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 17:42:17.9273 30280/Tb Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 17:42:17.9273 30280/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 17:42:17.9273 30280/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 17:42:17.9274 30280/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 17:42:17.9274 30280/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 17:42:17.9683 30280/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 17:42:25.8156 30533/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 17:42:25.8520 30536/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 17:42:25.8522 30536/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 17:42:25.8663 30536/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 30536
+App 30571 output: Traceback (most recent call last):
+App 30571 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 30571 output:     app_module = load_app()
+App 30571 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 30571 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 30571 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 2, in <module>
+App 30571 output:     from app import MyApp as application
+App 30571 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/app.py", line 1, in <module>
+App 30571 output:     from flask import Flask, render_template
+App 30571 output: ImportError: No module named flask
+[ E 2018-05-17 17:42:28.1289 30536/Te age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: 5a328b84
+  Error details saved to: /tmp/passenger-error-al1lcX.html
+
+[ E 2018-05-17 17:42:28.1445 30536/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 5a328b84. Please see earlier logs for details about the error.
+[ N 2018-05-17 17:42:28.1492 30536/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-05-17 17:51:02.1544 30536/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 17:51:02.1545 30536/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 17:51:02.1545 30536/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 17:51:02.1546 30536/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 17:51:02.1546 30536/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 17:51:02.1546 30536/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 17:51:02.1546 30536/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 17:51:02.1546 30536/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 17:51:02.1872 30536/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 18:03:14.3812 30817/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 18:03:14.4142 30820/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 18:03:14.4145 30820/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 18:03:14.4268 30820/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 30820
+App 30854 output: Traceback (most recent call last):
+App 30854 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 30854 output:     app_module = load_app()
+App 30854 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 30854 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 30854 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 3, in <module>
+App 30854 output:     from app import MyApp as application
+App 30854 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/app.py", line 1, in <module>
+App 30854 output:     from flask import Flask, render_template
+App 30854 output: ImportError: No module named flask
+[ N 2018-05-17 18:03:16.7085 30820/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+[ E 2018-05-17 18:03:16.7137 30820/Te age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: 24cd2148
+  Error details saved to: /tmp/passenger-error-kUev01.html
+
+[ E 2018-05-17 18:03:16.7249 30820/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 24cd2148. Please see earlier logs for details about the error.
+
+[ N 2018-05-17 18:03:20.8374 30820/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 18:03:20.8374 30820/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 18:03:20.8375 30820/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 18:03:20.8375 30820/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 18:03:20.8379 30820/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 18:03:20.8379 30820/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 18:03:20.8380 30820/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 18:03:20.8380 30820/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 18:03:20.8706 30820/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 20:50:31.5509 32155/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 20:50:31.5814 32158/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 20:50:31.5816 32158/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 20:50:31.5938 32158/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 32158
+App 32193 output: Traceback (most recent call last):
+App 32193 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 32193 output:     app_module = load_app()
+App 32193 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 32193 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 32193 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 3, in <module>
+App 32193 output:     from app import MyApp as application
+App 32193 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/app.py", line 1, in <module>
+App 32193 output:     from flask import Flask, render_template
+App 32193 output: ImportError: No module named flask
+[ E 2018-05-17 20:50:33.8534 32158/Te age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: d7d2c35a
+  Error details saved to: /tmp/passenger-error-t7m26E.html
+
+[ E 2018-05-17 20:50:33.8625 32158/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is d7d2c35a. Please see earlier logs for details about the error.
+[ N 2018-05-17 20:50:33.9476 32158/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-05-17 20:51:23.5792 32158/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 20:51:23.5792 32158/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 20:51:23.5794 32158/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 20:51:23.5794 32158/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 20:51:23.5794 32158/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 20:51:23.5795 32158/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 20:51:23.5795 32158/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 20:51:23.5796 32158/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 20:51:23.6165 32158/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 20:51:25.5914 32250/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 20:51:25.6218 32253/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 20:51:25.6221 32253/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 20:51:25.6339 32253/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 32253
+App 32287 output: Traceback (most recent call last):
+App 32287 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 32287 output:     app_module = load_app()
+App 32287 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 32287 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 32287 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 3, in <module>
+App 32287 output:     from app import MyApp as application
+App 32287 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/app.py", line 2, in <module>
+App 32287 output:     from flask import Flask, render_template
+App 32287 output: ImportError: No module named flask
+[ E 2018-05-17 20:51:27.9078 32253/Te age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: 7b25bb3e
+  Error details saved to: /tmp/passenger-error-BQHK7V.html
+
+[ E 2018-05-17 20:51:27.9173 32253/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 7b25bb3e. Please see earlier logs for details about the error.
+[ N 2018-05-17 20:51:27.9256 32253/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-05-17 20:51:56.2151 32253/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 20:51:56.2152 32253/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 20:51:56.2156 32253/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 20:51:56.2156 32253/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 20:51:56.2156 32253/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 20:51:56.2157 32253/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 20:51:56.2158 32253/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 20:51:56.2158 32253/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 20:51:56.2486 32253/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 21:01:06.8873 32467/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 21:01:06.9251 32470/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 21:01:06.9253 32470/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 21:01:06.9410 32470/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 32470
+App 32504 output: Traceback (most recent call last):
+App 32504 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 32504 output:     app_module = load_app()
+App 32504 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 32504 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 32504 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 3, in <module>
+App 32504 output:     from app import MyApp as application
+App 32504 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/app.py", line 2, in <module>
+App 32504 output:     from flask import Flask, render_template
+App 32504 output: ImportError: No module named flask
+[ N 2018-05-17 21:01:09.2225 32470/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+[ E 2018-05-17 21:01:09.2401 32470/Te age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: a1fa5b3a
+  Error details saved to: /tmp/passenger-error-kV28EP.html
+
+[ E 2018-05-17 21:01:09.2504 32470/T7 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is a1fa5b3a. Please see earlier logs for details about the error.
+
+[ N 2018-05-17 21:03:59.7794 32470/T7 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 21:03:59.7796 32470/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 21:03:59.7803 32470/T9 Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 21:03:59.7803 32470/T9 Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 21:03:59.7804 32470/T7 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 21:03:59.7804 32470/T7 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 21:03:59.7804 32470/Tb Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 21:03:59.7805 32470/Tb Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 21:03:59.8261 32470/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 23:17:35.0753 1274/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 23:17:35.1044 1277/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 23:17:35.1047 1277/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 23:17:35.1164 1277/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 1277
+[ N 2018-05-17 23:17:37.4462 1277/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-05-17 23:18:49.1218 1277/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 23:18:49.1218 1277/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 23:18:49.1219 1277/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 1312, application /home/jean/Documents/scrape/scrapeapp/basicApp (development)
+[ N 2018-05-17 23:18:49.1220 1277/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 23:18:49.1220 1277/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 23:18:49.1220 1277/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 23:18:49.1220 1277/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 23:18:49.1225 1277/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 23:18:49.1227 1277/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 23:18:49.1239 1277/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 1312, application /home/jean/Documents/scrape/scrapeapp/basicApp (development)
+[ N 2018-05-17 23:18:49.2614 1277/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-17 23:18:51.0976 1416/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-17 23:18:51.1278 1419/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-17 23:18:51.1280 1419/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-17 23:18:51.1400 1419/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 1419
+[ N 2018-05-17 23:18:53.4360 1419/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-05-17 23:19:20.0467 1419/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-17 23:19:20.0467 1419/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-17 23:19:20.0468 1419/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 1458, application /home/jean/Documents/scrape/scrapeapp/basicApp (development)
+[ N 2018-05-17 23:19:20.0469 1419/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-17 23:19:20.0469 1419/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-17 23:19:20.0470 1419/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-17 23:19:20.0470 1419/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-17 23:19:20.0471 1419/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-17 23:19:20.0471 1419/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-17 23:19:20.0472 1419/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 1458, application /home/jean/Documents/scrape/scrapeapp/basicApp (development)
+[ N 2018-05-17 23:19:20.1902 1419/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-19 11:07:21.3962 13188/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-19 11:07:21.5391 13191/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-19 11:07:21.5505 13191/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-19 11:07:21.5979 13191/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 13191
+[ N 2018-05-19 11:07:24.0064 13191/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+App 13225 output: Traceback (most recent call last):
+App 13225 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 369, in <module>
+App 13225 output:     app_module = load_app()
+App 13225 output:   File "/usr/share/passenger/helper-scripts/wsgi-loader.py", line 76, in load_app
+App 13225 output:     return imp.load_source('passenger_wsgi', startup_file)
+App 13225 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/passenger_wsgi.py", line 2, in <module>
+App 13225 output:     from app import MyApp as application
+App 13225 output:   File "/home/jean/Documents/scrape/scrapeapp/basicApp/app.py", line 2, in <module>
+App 13225 output:     
+App 13225 output: from flask import Flask, render_template
+App 13225 output: ImportError
+App 13225 output: : 
+App 13225 output: No module named flask
+App 13225 output: 
+[ E 2018-05-19 11:07:24.8181 13191/Te age/Cor/App/Implementation.cpp:221 ]: Could not spawn process for application /home/jean/Documents/scrape/scrapeapp/basicApp: The application process exited prematurely.
+  Error ID: 337bb452
+  Error details saved to: /tmp/passenger-error-auXur7.html
+
+[ E 2018-05-19 11:07:24.8277 13191/T8 age/Cor/Con/CheckoutSession.cpp:276 ]: [Client 1-1] Cannot checkout session because a spawning error occurred. The identifier of the error is 337bb452. Please see earlier logs for details about the error.
+
+[ N 2018-05-19 11:07:40.5619 13191/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-19 11:07:40.5619 13191/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-19 11:07:40.5620 13191/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-19 11:07:40.5620 13191/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-19 11:07:40.5620 13191/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-19 11:07:40.5621 13191/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-19 11:07:40.5621 13191/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-19 11:07:40.5621 13191/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-19 11:07:40.5942 13191/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
