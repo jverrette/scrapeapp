@@ -5,10 +5,23 @@
     </head>
     <body>
         <h1>Below is the available information:</h1>
-        <h1>Website: {{ website }}</h1>
-        <h1>Phone: {{ phone }}</h1>
-        <h1>Email: {{ email }}</h1>
-        <h1>Facebook: {{ facebook }}</h1>
-        <h1>Instagram: {{ instagram }}</h1>
+
+{% for item in information %}
+    <p> {{ item }} </p>
+{% endfor %}
+
+<p id="email"></p>
+<p id="phone"></p>
+<p id="facebook"></p>
+<p id="instagram"></p>
+<p> Email: {{ information[0] }} </p>
+<script>
+
+document.getElementById("email").innerHTML = '{{ information[0] }}';
+document.getElementById("phone").innerHTML = '{{ information[1] }}';
+document.getElementById("facebook").innerHTML = '{{ information[2] }}';
+document.getElementById("instagram").innerHTML = '{{ information[3] }}';
+</script>
+
     </body>
 </html>

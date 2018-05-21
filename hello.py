@@ -10,11 +10,9 @@ def hello2(name='index'):
 @app.route('/send', methods=['POST', 'GET'])
 def hello():
     if request.method == 'POST':
-        outputter = request.form['website']
-        soup = pythonFile.get_soup(outputter)
-pythonFile.facebook(soup)
-        lister = pythonFile.db(outputter)
-        return render_template('response.html', website=outputter, phone=pythonFile.phone(lister), email=pythonFile.emails(lister))
+        website = request.form['website']
+        information = pythonFile.main(website)
+        return render_template('response.html', website=website, information =information)
     return render_template('index.html')
  
 if __name__ == "__main__":
