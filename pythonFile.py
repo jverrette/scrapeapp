@@ -56,7 +56,24 @@ def db(soup):
         lister.extend(phrase.split("\n"))
     return lister
 
-def email(lister):
+def emailLink(soup):
+    links = soup.find_all('a') 
+    for idx, link in enumerate(links):
+        try:
+            match = re.search('mailto:', link.get('href'))
+         
+            if match.group(0):
+                output = link.get('href')
+                return output.replace("mailto:", "")
+         
+        except:
+            pass
+    return ''
+
+def email(soup, lister):
+    emailFromLink = emailLink(soup)
+    if bool(emailFromLink):
+        return emailFromLink
     for idx, phrase in enumerate(lister):
         try:
             match = re.search('(<)?(\w+@\w+(?:\.\w+)+)(?(1)>)', lister[idx])
@@ -129,7 +146,7 @@ def missingData(stringer, soup, listing):
 def main(stringer):
     soup = get_soup(stringer)
     lister = db(soup)
-    listing = [email(lister), phone(lister), facebook(soup), instagram(soup)]
+    listing = [email(soup, lister), phone(lister), facebook(soup), instagram(soup)]
 
     return missingData(stringer, soup, listing)
   
