@@ -7,11 +7,14 @@ def get_soup(stringer):
     wiki = stringer
     #print(stringer)
 #Query the website and return the html to the variable 'page'
+    urllib3.disable_warnings()
     http = urllib3.PoolManager()
     page = http.request('GET', wiki)
-
+    # also break up by <br /> tags which refer to new lines
+    # replace <br /> with a new line \n
+    output = str(page.data).replace("<br/>", '\n')
 #Parse the html in the 'page' variable, and store it in Beautiful Soup format
-    return BeautifulSoup(page.data, "lxml")
+    return BeautifulSoup(output, "lxml")
 
 def facebook(soup):
     links = soup.find_all('a') 
@@ -45,19 +48,21 @@ def db(soup):
     hey = [s.extract() for s in soup(['style', 'script', '[document]', 'head', 'title'])]
 
     contents = soup.find_all("p")
-    outputText = [contents[i].get_text() for i in range(len(contents))]
+    outputText = [content.get_text() for content in contents]
     # split up the list further based on new lines or tabs
     # having various lines will make it easier to distinguish between important information and various words
     lister = []
-    for i in range(len(outputText)):
-        lister.extend(outputText[i].split("\n"))
+    for phrase in outputText:
+        lister.extend(phrase.split("\n"))
     return lister
 
 def email(lister):
     for idx, phrase in enumerate(lister):
         try:
             match = re.search('(<)?(\w+@\w+(?:\.\w+)+)(?(1)>)', lister[idx])
-            return match.group(0)
+            output = match.group(0)
+            #print(phrase)
+            return output
         except:
             pass
     return ''
@@ -83,14 +88,15 @@ def contact(stringer, soup):
     for idx, link in enumerate(links):
         try:
             match = re.search('(contact)|(kontakt)', link.get('href'))
-            print(link)
+            #print(link)
             if match.group(0):
     # Check if the link can be input to get_soup function
+                stringerContact = link.get('href')
                 if stringerContact[:1]=='//': 
-                    return stringerContact = 'http:'+stringerContact
-                elif stringerContact[0]=='/':
-                    return stringerContact = stringer+stringerContact
-                return link.get('href')
+                    return 'http:'+stringerContact
+                elif stringerContact[0]=='/': # when we have a sublink rather than the full address
+                    return stringer+stringerContact
+                return stringerContact
          
         except:
             pass
@@ -103,7 +109,7 @@ def missingData(stringer, soup, listing):
     # boolean mask for missing information
     missing = [not bool(word) for word in listing]
     if any(missing):
-        stringerContact = contact(soup)
+        stringerContact = contact(stringer, soup)
     else:
         stringerContact = ''
     # perform only if the original page has some contactpage 
@@ -125,7 +131,7 @@ def main(stringer):
     lister = db(soup)
     listing = [email(lister), phone(lister), facebook(soup), instagram(soup)]
 
-    return missingData(soup, listing)
+    return missingData(stringer, soup, listing)
   
 if __name__=='__main__':
     email, phone, facebook, instagram = main(sys.argv[1])
