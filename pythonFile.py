@@ -148,7 +148,7 @@ def main(stringer):
     lister = db(soup)
     listing = [email(soup, lister), phone(lister), facebook(soup), instagram(soup)]
 
-    return missingData(stringer, soup, listing)
+    return dict(zip(['Email: ','Phone: ','Facebook: ','Instagram: '], missingData(stringer, soup, listing)))
   
 if __name__=='__main__':
     email, phone, facebook, instagram = main(sys.argv[1])
