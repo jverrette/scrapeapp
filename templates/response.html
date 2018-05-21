@@ -6,21 +6,24 @@
     <body>
         <h1>Below is the available information:</h1>
 
-{% for item in information %}
-    <p> {{ item }} </p>
-{% endfor %}
-
 <p id="email"></p>
 <p id="phone"></p>
 <p id="facebook"></p>
 <p id="instagram"></p>
-<p> Email: {{ information[0] }} </p>
-<script>
 
-document.getElementById("email").innerHTML = '{{ information[0] }}';
-document.getElementById("phone").innerHTML = '{{ information[1] }}';
-document.getElementById("facebook").innerHTML = '{{ information[2] }}';
-document.getElementById("instagram").innerHTML = '{{ information[3] }}';
+<script  type="text/javascript">
+var label = ['Email', 'Phone', 'Facebook', 'Instagram'];
+
+function choosePrint(category, information) {
+
+    if (information==0) {return ''} else {return category+': '+information};
+
+}
+
+document.getElementById("email").innerHTML = choosePrint(label[0], '{{ information[0] }}');
+document.getElementById("phone").innerHTML = choosePrint(label[1], '{{ information[1] }}');
+document.getElementById("facebook").innerHTML = choosePrint(label[2], '{{ information[2] }}');
+document.getElementById("instagram").innerHTML = choosePrint(label[3], '{{ information[3] }}');
 </script>
 
     </body>
