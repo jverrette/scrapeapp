@@ -1217,3 +1217,37 @@ App 28477 output: jinja2.exceptions.UndefinedError: 'dict object' has no attribu
 [ N 2018-05-21 23:50:08.8633 29014/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
 [ N 2018-05-21 23:50:08.8633 29014/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 29048, application /home/jean/Documents/scrape/scrapeapp (development)
 [ N 2018-05-21 23:50:09.0062 29014/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-22 00:03:54.8717 29264/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-22 00:03:54.9051 29267/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-22 00:03:54.9054 29267/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-22 00:03:54.9176 29267/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 29267
+[ N 2018-05-22 00:03:58.2539 29267/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-05-22 00:08:42.6906 29267/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-22 00:08:42.6907 29267/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-22 00:08:42.6907 29267/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 29301, application /home/jean/Documents/scrape/scrapeapp (development)
+[ N 2018-05-22 00:08:42.6908 29267/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-22 00:08:42.6908 29267/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-22 00:08:42.6908 29267/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-22 00:08:42.6908 29267/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-22 00:08:42.6909 29267/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-22 00:08:42.6910 29267/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-22 00:08:42.6910 29267/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 29301, application /home/jean/Documents/scrape/scrapeapp (development)
+[ N 2018-05-22 00:08:42.8279 29267/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
+[ N 2018-05-22 00:08:44.4368 29523/T1 age/Wat/WatchdogMain.cpp:1259 ]: Starting Passenger watchdog...
+[ N 2018-05-22 00:08:44.4673 29526/T1 age/Cor/CoreMain.cpp:1236 ]: Starting Passenger core...
+[ N 2018-05-22 00:08:44.4675 29526/T1 age/Cor/CoreMain.cpp:251 ]: Passenger core running in multi-application mode.
+[ N 2018-05-22 00:08:44.4796 29526/T1 age/Cor/CoreMain.cpp:971 ]: Passenger core online, PID 29526
+[ N 2018-05-22 00:08:46.7919 29526/T5 age/Cor/SecurityUpdateChecker.h:517 ]: Security update check: no update found (next check in 24 hours)
+
+[ N 2018-05-22 00:12:07.1122 29526/T8 age/Cor/CoreMain.cpp:615 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2018-05-22 00:12:07.1123 29526/T1 age/Cor/CoreMain.cpp:1148 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2018-05-22 00:12:07.1123 29526/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 29565, application /home/jean/Documents/scrape/scrapeapp (development)
+[ N 2018-05-22 00:12:07.1124 29526/T8 Ser/Server.h:903 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2018-05-22 00:12:07.1124 29526/T8 Ser/Server.h:559 ]: [ServerThr.1] Shutdown finished
+[ N 2018-05-22 00:12:07.1129 29526/Ta Ser/Server.h:903 ]: [ServerThr.2] Freed 0 spare client objects
+[ N 2018-05-22 00:12:07.1129 29526/Ta Ser/Server.h:559 ]: [ServerThr.2] Shutdown finished
+[ N 2018-05-22 00:12:07.1138 29526/Tc Ser/Server.h:903 ]: [ApiServer] Freed 0 spare client objects
+[ N 2018-05-22 00:12:07.1139 29526/Tc Ser/Server.h:559 ]: [ApiServer] Shutdown finished
+[ N 2018-05-22 00:12:07.1141 29526/T1 age/Cor/CoreMain.cpp:1062 ]: Checking whether to disconnect long-running connections for process 29565, application /home/jean/Documents/scrape/scrapeapp (development)
+[ N 2018-05-22 00:12:07.2484 29526/T1 age/Cor/CoreMain.cpp:1221 ]: Passenger core shutdown finished
