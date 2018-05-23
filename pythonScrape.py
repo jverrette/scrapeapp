@@ -1,19 +1,14 @@
 import urllib3, sys, re
 from bs4 import BeautifulSoup
 
-
-def get_soup(stringer):
-    #wiki = 'http://petdoc.ch/'
-    wiki = stringer
-    #print(stringer)
-#Query the website and return the html to the variable 'page'
+def get_soup(wiki):
     urllib3.disable_warnings()
     http = urllib3.PoolManager()
     page = http.request('GET', wiki)
     # also break up by <br /> tags which refer to new lines
     # replace <br /> with a new line \n
     output = str(page.data).replace("<br/>", '\n')
-#Parse the html in the 'page' variable, and store it in Beautiful Soup format
+    #Parse the html and convert to Beautiful Soup format
     return BeautifulSoup(output, "lxml")
 
 def facebook(soup):
@@ -58,7 +53,7 @@ def db(soup):
 
 def emailLink(soup):
     links = soup.find_all('a') 
-    for idx, link in enumerate(links):
+    for link in links:
         try:
             match = re.search('mailto:', link.get('href'))
          
@@ -98,13 +93,15 @@ def phone(lister):
     return ''
 
 def contact(stringer, soup):
+# stringer is the original websites
+# soup is the beautiful soup variable resulting from the original website
 # Returns either:
-#1. the first link available on page with the word contact in the title
-#2. 'None Available'
+#1. the first link available on page with the word contact or kontact in the title
+#2. ''
     links = soup.find_all('a') 
     for idx, link in enumerate(links):
         try:
-            match = re.search('(contact)|(kontakt)', link.get('href'))
+            match = re.search('(contact)|(kontakt)|(contatti)', link.get('href'))
             #print(link)
             if match.group(0):
     # Check if the link can be input to get_soup function

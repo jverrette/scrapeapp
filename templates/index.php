@@ -23,37 +23,27 @@ code {
 <h3>Dependencies</h3>
 <p>We've excuted the app with Python 3.5 and modules re, urllib3, and bs4. While any version of python 3 will already be equipped with re, the latter modules can be installed with pip.</p>
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
-
-  $pip install urllib3
+<code>
+  $pip install urllib3<br>
   $pip install beautifulsoup4
-
-</code></pre>
+</code>
 
 <h3>Re</h3>
 <p>We've used regular expressions to pull key pieces of contact information from the text of the website. Many of the regex patterns we've used in our algorithm are reviewed below, but we encourage interested parties to visit the Python documentation for more information.</p>
 <a href="https://docs.python.org/3/library/re.html">link text</a>
 
 <p>The re.search function gives us a match whose information can be assessed using match.group</p>
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
-
+<code>
    $match = re.search('instagram', 'https://www.instagram.com/')
    $match.roup(0)
-
-</code></pre>
-
+</code>
 
 <p>When applying re.search to links on the given website, we searched for the first link that includes the word facebook.</p>
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
-
+<code>
    $match = re.search('facebook', link)
    $facebookLink = match.group(0)
-
-</code></pre>
+</code>
 
 <p>Different regrex functions were written based on the country of origin of any phone number.
 Indiviual characters put inside [], square brackets, match any of the individual characters. When considering phone numbers, we would like to match both <br>
@@ -70,36 +60,34 @@ The question mark, ?, to the right of some character(s) matches exactly 0 or 1 r
 
 <p>We chose to create separate regexes based on the country. Our algorithm will only detects phone numbers from those countries.</p>
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
-
-   $usa = '(1|\+1)?([ -])?(\d{3}|\(\d{3}\))?([ -])?\d{3}([ -])?\d{4}'
-   $swiss = '(41|\+41)?(0|\(0\))?\d{2}([ -])?\d{3}([ -])?\d{2}([ -])?\d{2}'
-   $china = '(86|\+86)?([ -])?1\d{2}([ -])?\d{4}([ -])?\d{4}'
-
-</code></pre>
+<code>
+<?php
+   $str = "$usa = '(1|\+1)?([ -])?(\d{3}|\(\d{3}\))?([ -])?\d{3}([ -])?\d{4}'";
+echo htmlspecialchars($str);
+?><br>
+<?php
+   $str = "$swiss = '(41|\+41)?(0|\(0\))?\d{2}([ -])?\d{3}([ -])?\d{2}([ -])?\d{2}'";
+echo htmlspecialchars($str);
+?><br>
+<?php
+   $str = "$china = '(86|\+86)?([ -])?1\d{2}([ -])?\d{4}([ -])?\d{4}'";
+echo htmlspecialchars($str);
+?><br>
+</code>
 
 <h3>Beautiful Soup</h3>
-<p>The Beautiful Soup module was used to parse the given website's html. We use urllib3 and a get request to recover the html, and beautiful soup organizes everything to make it easy to search by html tags. </p>
-
-Link: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+<p>The <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup</a> module was used to parse the given website's html. We use urllib3 and a get request to recover the html, and beautiful soup organizes everything to make it easy to search by html tags. </p>
 
 <h3>Recovering and Searching Links from website</h3>
 <p>We begin by pulling out all of the <\a> tags.</p>
  
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
-
+<code>
    $links = soup.find_all('a')
-</code></pre>
+</code>
 <p>For each link, we can search for pertinent substrungs using the re module as described previously.</p>
 
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
-
-    for link in links:
-        try:
+<code>
             match = re.search('mailto:', link.get('href'))
             if match.group(0):
                 output = link.get('href')
@@ -107,34 +95,35 @@ Link: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
         except:
             pass
 
-</code></pre>
+</code>
 
 <p>Note that the try and except flow controls are necessary, because re.search may not always run successfully. Because only some websites link the email address with the 'mailto:' substring, we must also use a regex on the text from the website.</p>
 
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
-   '(<)?(\w+@\w+(?:\.\w+)+)(?(1)>)'
-</code></pre>
+<code>
+<?php
+   $str = "'(<)?(\w+@\w+(?:\.\w+)+)(?(1)>)'";
+echo htmlspecialchars($str);
+?> 
+</code>
 <h3>Visible text from the website</h3>
 <p>The beautifulsoup get_text function does not respect <\br> tags within the html. We replace such tags with newlines so that contact information on separate lines do not blend together.</p>
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
-   $output = str(page.data).replace("<br/>", '\n')
-</code></pre>
+<code>
+<?php
+   $str = "$output = str(page.data).replace("<br/>", '\n')";
+echo htmlspecialchars($str);
+?>
+</code>
 We proceed by removing many of the hidden tags from the soup of html.
 soup = BeautifulSoup(output, "lxml")
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
-
+<code>
    $[s.extract() for s in soup(['style', 'script', '[document]', 'head', 'title'])]
-</code></pre>
+</code>
 <p>Applying the get_text function to the entire beautiful soup variable, results in phrases and text running together without proper spacing. To combat this, we consider only the <\p> tags, and apply get_text to each of the contents.</p>
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
+<code>
 
    $contents = soup.find_all("p")
    $outputText = [content.get_text() for content in contents]
@@ -143,46 +132,43 @@ soup = BeautifulSoup(output, "lxml")
    # between important information and various words
    $lister = []
    $for phrase in outputText:
-        lister.extend(phrase.split("\n"))
+<?php
+   $str = "lister.extend(phrase.split("\n"))";
+echo htmlspecialchars($str);
+?>
 
-</code></pre>
+</code>
 <p>For example, we don't want foul cases like the one below.<br/>
 1600 Pennsylvania Avenue NW<br/>
 Washington, DC 20500<br/>
 <a href="https://twitter.com/realDonaldTrump">202-456-1111</a></p>
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
-   $htmlstring = '<html><head> </head><body></a>1600 Pennsylvania Avenue NW<br/>Washington, DC 20500<br/>202-456-1111</a></body></html>'
-   $soup = BeautifulSoup(html, "lxml")
-   $soup.get_text()
-   :'20500202-456-1111'
-   EOD;
-
+<code>
 <?php
-$new = htmlspecialchars("<a href='test'>Test</a>", ENT_QUOTES);
-echo $new; // &lt;a href=&#039;test&#039;&gt;Test&lt;/a&gt;
-?>
+   $str = "$htmlstring = '<html><head> </head><body></a>1600 Pennsylvania Avenue NW<br/>Washington, DC 20500<br/>202-456-1111</a></body></html>'";
+echo htmlspecialchars($str);
+?><br>
+   $soup = BeautifulSoup(html, 'lxml')<br>
+   $soup.get_text()<br>
+   :'1600 Pennsylvania Avenue NWWashington, DC 20500202-456-1111'
 
-</code></pre>
+</code>
 
 <h3>Contact Page</h3>
 <p>Many webpages include particular contact information pages. Our code performs the same search algorithm on the contact page if and only if both a contact page exists, and all contact information was not previously found on the original webpage. </p>
 
 <p>Out regular expression matches contact pages in English, French, German, and Italian.</p>
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
+<code>
 
    $match = re.search('(contact)|(kontakt)|(contatti)', link.get('href'))
-</code></pre>
+</code>
 <p>We run into two major error cases when considering contact page urls.
 Case 0. The protocol of the url is not given.
 Case 1. Only the path of the contact page url is given.</p>
 
 
-<pre><code><? $str = <<<'EOD'
-  <!-- your code here -->
+<code>
 
    $def contact(stringer, soup):
    # stringer is the original websites
@@ -193,7 +179,7 @@ Case 1. Only the path of the contact page url is given.</p>
                 elif stringerContact[0]=='/': # when we have a sublink rather than the full address
                     return stringer+stringerContact
 
-</code></pre>
+</code>
 <p>We will not include any further information about <a href="http://flask.pocoo.org/">Flask</a> or <a href="https://www.phusionpassenger.com">Passenger</a> used to display this tutorial.
 Please visit the github package for the complete code and more information. Email any further questions to <a href="mailto:jverrette@gmail.com">jverrette@gmail.com</a>, and thank you for reading!</p>
     </body>
