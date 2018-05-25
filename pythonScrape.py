@@ -38,6 +38,19 @@ def instagram(soup):
             pass
     return ''
 
+def twitter(soup):
+    links = soup.find_all('a') 
+    for idx, link in enumerate(links):
+        try:
+            match = re.search('twitter', link.get('href'))
+         
+            if match.group(0):
+                return link.get('href')
+         
+        except:
+            pass
+    return ''
+
 def db(soup):
 
     hey = [s.extract() for s in soup(['style', 'script', '[document]', 'head', 'title'])]
@@ -83,6 +96,8 @@ def phone(lister):
     usa = '(1|\+1)?([ -])?(\d{3}|\(\d{3}\))?([ -])?\d{3}([ -])?\d{4}'
     swiss = '(41|\+41)?(0|\(0\))?\d{2}([ -])?\d{3}([ -])?\d{2}([ -])?\d{2}'
     china = '(86|\+86)?([ -])?1\d{2}([ -])?\d{4}([ -])?\d{4}'
+    germany = '(49|\+49)?([ -])?(\d{3}|\(\d{3}\))?([ -])?\d{3}([ -])?\d{4}'
+    uk = '\(?0\d{2,3}\)?([ -])?\d{3,4}([ -])?\d{4}'
     for regrex in [usa, swiss, china]:
         for idx, phrase in enumerate(lister):
             try:
@@ -130,10 +145,10 @@ def missingData(stringer, soup, listing):
     # and there is missing information
     #print(stringerContact)
     if bool(stringerContact):
-        functions = [email, phone, facebook, instagram]
+        functions = [email, phone, facebook, instagram, twitter]
         try: # in case the contact link on the site is broken
             soupContact = get_soup(stringerContact)
-            for idx in [missed for missed in range(4) if missing[missed]]:
+            for idx in [missed for missed in range(5) if missing[missed]]:
     # look only for missing information
                 listing[idx] = functions[idx](soupContact)
         except:
@@ -143,11 +158,11 @@ def missingData(stringer, soup, listing):
 def main(stringer):
     soup = get_soup(stringer)
     lister = db(soup)
-    listing = [email(soup, lister), phone(lister), facebook(soup), instagram(soup)]
+    listing = [email(soup, lister), phone(lister), facebook(soup), instagram(soup), twitter(soup)]
 
-    return dict(zip(['Email: ','Phone: ','Facebook: ','Instagram: '], missingData(stringer, soup, listing)))
+    return dict(zip(['Email: ','Phone: ','Facebook: ','Instagram: ','Twitter: '], missingData(stringer, soup, listing)))
   
 if __name__=='__main__':
-    email, phone, facebook, instagram = main(sys.argv[1])
-    print('Email: %s, Phone: %s, Facebook: %s, Instagram: %s' % (email, phone, facebook, instagram))
+    email, phone, facebook, instagram, twitter = main(sys.argv[1])
+    print('Email: %s, Phone: %s, Facebook: %s, Instagram: %s, Twitter: %s' % (email, phone, facebook, instagram, twitter))
 # python3 pythonScrape.py 'http://diewaid.ch/'
